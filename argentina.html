@@ -1,279 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8">
-    <title>Argentina</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Información sobre Argentina" name="keywords">
-    <meta content="Página informativa sobre Argentina: bandera, escudo, cultura, turismo, gastronomía, deportes y datos curiosos." name="description">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre Argentina: historia, cultura, tango y naturaleza.">
+  <title>Argentina - Historia, Cultura y Tango</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --celeste: #74ACDF;
+      --amarillo: #E6A80A;
+      --blanco: #FFFFFF;
+      --gris: #f4f6f8;
+    }
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris);
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, var(--celeste), var(--amarillo));
+    }
+    nav a {
+      color: #fff !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    /* Header */
+    header {
+      background: linear-gradient(to right, var(--celeste), var(--amarillo));
+      color: #fff;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    /* Secciones */
+    .section {
+      padding: 80px 0;
+    }
+    .section:nth-child(even) {
+      background: #fff;
+    }
+    .section-title h1 {
+      color: var(--celeste);
+      font-weight: bold;
+    }
+    .section-title h4 {
+      color: #555;
+    }
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.min.css" rel="stylesheet">
+    /* Botones */
+    .btn-custom {
+      background: linear-gradient(90deg, var(--amarillo), #c28800);
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-custom:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
 
-    <style>
-        /* Colores de Argentina */
-        .navbar, .footer, .btn-primary {
-            background-color: #74ACDF !important; /* Celeste */
-        }
-        .text-primary {
-            color: #009FE3 !important; /* Azul celeste */
-        }
-        .btn-primary {
-            border-color: #FFD700 !important; /* Dorado */
-        }
-        .btn-primary:hover {
-            background-color: #009FE3 !important;
-            border-color: #FFD700 !important;
-        }
-        .page-header {
-            border-bottom: 5px solid #FFD700;
-        }
-        .service-icon {
-            color: #FFD700;
-        }
-        .footer {
-            background: linear-gradient(180deg, #009FE3 0%, #74ACDF 100%);
-        }
-    </style>
+    /* Imágenes */
+    img {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--celeste);
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 class="m-0 display-4 text-uppercase text-white">🇦🇷 Argentina</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                    <a href="#historia" class="nav-item nav-link">Historia</a>
-                    <a href="#cultura" class="nav-item nav-link">Cultura</a>
-                    <a href="#turismo" class="nav-item nav-link">Turismo</a>
-                    <a href="#gastronomia" class="nav-item nav-link">Gastronomía</a>
-                    <a href="#curiosidades" class="nav-item nav-link">Curiosidades</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 position-relative overlay-bottom" style="background: url('img/argentina-header.jpg') center/cover no-repeat;">
-        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
-            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Bienvenidos a Argentina</h1>
-            <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
-                <p class="m-0 text-white px-2">/</p>
-                <p class="m-0 text-white">Información General</p>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-    <!-- Información General Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Conoce</h4>
-                <h1 class="display-4">Argentina</h1>
-                <p class="lead">Argentina es el segundo país más grande de América del Sur y el octavo del mundo. Su capital es Buenos Aires, y su territorio abarca desde las cálidas cataratas del norte hasta los fríos glaciares del sur en la Patagonia.</p>
-            </div>
-            <div class="row">
-                <!-- Bandera -->
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/bandera.jpg" alt="Bandera de Argentina">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-flag service-icon"></i> Bandera Nacional</h4>
-                            <p class="m-0">Creada en 1812 por Manuel Belgrano. Posee tres franjas: dos celestes y una blanca en el medio, con el Sol de Mayo, símbolo de libertad e independencia.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Escudo -->
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/escudo.jpg" alt="Escudo de Argentina">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-shield-alt service-icon"></i> Escudo Nacional</h4>
-                            <p class="m-0">Simboliza unión, libertad y esfuerzo. Contiene dos manos estrechadas, un gorro frigio, ramas de laurel y el Sol de Mayo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Información General End -->
-
-    <!-- Historia -->
-    <div id="historia" class="container py-5">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase">Historia</h4>
-            <h2>Un país de luchas y logros</h2>
-        </div>
-        <p>Argentina declaró su independencia de España el 9 de julio de 1816 en San Miguel de Tucumán. Desde entonces, atravesó periodos de conflictos, dictaduras y democracia, convirtiéndose en un referente político y cultural en América Latina.</p>
-    </div>
-
-    <!-- Cultura -->
-    <div id="cultura" class="container py-5">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase">Cultura</h4>
-            <h2>Identidad y Tradiciones</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <p>El tango, el mate, el fútbol y el asado son pilares de la cultura argentina. Buenos Aires es considerada la cuna del tango, declarado Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="img/cultura.jpg" class="img-fluid rounded" alt="Cultura Argentina">
-            </div>
-        </div>
-    </div>
-
-    <!-- Turismo -->
-    <div id="turismo" class="container py-5">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase">Turismo</h4>
-            <h2>Destinos Imperdibles</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <img src="img/iguazu.jpg" class="img-fluid rounded mb-2" alt="Cataratas del Iguazú">
-                <h5>Cataratas del Iguazú</h5>
-                <p>Una de las 7 maravillas naturales del mundo, ubicada en Misiones.</p>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <img src="img/perito.jpg" class="img-fluid rounded mb-2" alt="Glaciar Perito Moreno">
-                <h5>Glaciar Perito Moreno</h5>
-                <p>Una imponente maravilla natural de la Patagonia.</p>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <img src="img/andes.jpg" class="img-fluid rounded mb-2" alt="Cordillera de los Andes">
-                <h5>Cordillera de los Andes</h5>
-                <p>Hogar del Aconcagua, la montaña más alta de América.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gastronomía -->
-    <div id="gastronomia" class="container py-5">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase">Gastronomía</h4>
-            <h2>Sabores de Argentina</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <ul>
-                    <li><b>Asado:</b> símbolo de la tradición argentina.</li>
-                    <li><b>Mate:</b> bebida típica compartida entre amigos y familia.</li>
-                    <li><b>Empanadas:</b> rellenas de carne, pollo o queso.</li>
-                    <li><b>Dulce de leche:</b> protagonista en postres y alfajores.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <img src="img/asado.jpg" class="img-fluid rounded" alt="Asado argentino">
-            </div>
-        </div>
-    </div>
-
-    <!-- Datos curiosos -->
-    <div id="curiosidades" class="container py-5">
-        <div class="section-title">
-            <h4 class="text-primary text-uppercase">Curiosidades</h4>
-            <h2>Lo que quizás no sabías</h2>
-        </div>
-        <ul>
-            <li>Argentina fue el primer país en Latinoamérica en legalizar el matrimonio igualitario (2010).</li>
-            <li>La Avenida 9 de Julio en Buenos Aires es la más ancha del mundo.</li>
-            <li>La Antártida Argentina es la mayor área reclamada del continente blanco.</li>
-            <li>Diego Maradona y Lionel Messi son íconos mundiales del fútbol.</li>
-            <li>Es uno de los mayores productores de vino del mundo, especialmente en Mendoza.</li>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🇦🇷 Argentina</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="colombia.html">Colombia</a></li>
+          <li class="nav-item"><a class="nav-link" href="españa.html">España</a></li>
+          <li class="nav-item"><a class="nav-link" href="mexico.html">México</a></li>
+          <li class="nav-item"><a class="nav-link" href="argentina.html">Argentina</a></li>
         </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
-        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4">Ubicación</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Buenos Aires, Argentina</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+54 11 1234 5678</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@argentina.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4">Síguenos</h4>
-                <p>Conoce más sobre Argentina en nuestras redes sociales.</p>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4">Horarios</h4>
-                <p><b>Museos:</b> 10.00 AM - 6.00 PM</p>
-                <p><b>Oficinas Turísticas:</b> 9.00 AM - 5.00 PM</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
-                <p>Recibe noticias y novedades sobre Argentina.</p>
-                <div class="input-group">
-                    <input type="text" class="form-control border-light" placeholder="Tu Email">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary font-weight-bold px-3">Suscribirse</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid text-center text-white border-top mt-4 py-4">
-            <p class="mb-2">Copyright &copy; <a class="font-weight-bold text-white" href="#">Argentina Web</a>. Todos los derechos reservados.</p>
-            <p class="m-0">Diseñado en colaboración</p>
-        </div>
+  <header class="text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Descubre Argentina</h1>
+      <p class="lead">Tango, pasión y paisajes de ensueño</p>
+      <a href="#info" class="btn btn-custom mt-3">Comenzar</a>
     </div>
-    <!-- Footer End -->
+  </header>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+  <main>
+    <section id="info" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Argentina</h4>
+        <h1>Información General</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            Argentina, oficialmente la República Argentina, es un país de América del Sur. Su capital es Buenos Aires y su idioma oficial es el español. Es el segundo país más grande de Sudamérica y el octavo más grande del mundo.
+          </p>
+          <p>
+            La moneda oficial es el peso argentino ($). Es una república federal con una población de más de 45 millones de habitantes. Es famosa por su cultura, la pasión por el fútbol y la vasta diversidad de sus paisajes.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" 
+               class="img-fluid" alt="Bandera de Argentina" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <section id="historia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Argentina</h4>
+        <h1>Historia y Cultura</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Caminito_in_La_Boca_by_Ricardo_Gimenez.jpg" 
+               class="img-fluid" alt="Barrio La Boca en Buenos Aires" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            La historia argentina está marcada por su independencia de España en 1816. A finales del siglo XIX y principios del XX, el país recibió una gran ola de inmigrantes europeos, principalmente italianos y españoles, lo que ha influido profundamente en su cultura.
+          </p>
+          <p>
+            La cultura argentina es reconocida por el tango, un género musical y de baile que es Patrimonio de la Humanidad. El fútbol es una parte fundamental de la identidad nacional, con leyendas como Diego Maradona y Lionel Messi. También es famosa por su gastronomía, especialmente el asado y el vino.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <section id="geografia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Argentina</h4>
+        <h1>Geografía y Naturaleza</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            Argentina ofrece una geografía que va desde los picos andinos en el oeste hasta las vastas llanuras de la Pampa en el centro y las mesetas frías de la Patagonia en el sur. El Aconcagua, el pico más alto de América, se encuentra aquí.
+          </p>
+          <p>
+            Sus paisajes naturales incluyen las Cataratas del Iguazú, uno de los conjuntos de cataratas más impresionantes del mundo. En la Patagonia, se pueden explorar glaciares como el Perito Moreno y la región de los lagos, mientras que en el norte se encuentra el desierto de sal de Purmamarca.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Iguazu_Falls_from_Brazilian_side.jpg" 
+               class="img-fluid" alt="Cataratas del Iguazú" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <section id="economia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Argentina</h4>
+        <h1>Economía y Curiosidades</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Buenos_Aires_Obelisco.jpg" 
+               class="img-fluid" alt="Obelisco de Buenos Aires" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            La economía argentina se basa en la exportación de productos agrícolas y ganaderos como la soja, el maíz y la carne vacuna. El turismo también es un sector importante, con millones de visitantes que llegan a conocer sus ciudades y paisajes naturales.
+          </p>
+          <p>
+            Curiosidades: En Argentina se inventó el birome o bolígrafo. Es el país de los glaciares, con más de 300 en el Parque Nacional Los Glaciares. El mate es una bebida tradicional que se consume diariamente y representa un símbolo de amistad y hospitalidad.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Página sobre Argentina</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
