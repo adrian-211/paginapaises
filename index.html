@@ -1,140 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <title>Países del Mundo</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bienvenido a tu guía de países: España, México, Colombia y Argentina.">
+  <title>Bienvenido - Explora el Mundo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    :root {
+      --celeste: #74ACDF;
+      --verde: #006847;
+      --rojo: #CE1126;
+      --dorado: #ffb300;
+      --gris: #f4f6f8;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #F5F5F5;
-      color: #424242;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris);
+      color: #333;
+      scroll-behavior: smooth;
     }
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, var(--verde), var(--rojo), var(--celeste));
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
+    nav a {
+      color: #fff !important;
+      font-weight: 500;
+      transition: 0.3s;
     }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      color: #FFC107;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #E0E0E0;
-    }
-
-    .hero h2 {
-      font-size: 48px;
-      color: #212121;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #424242;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .section h3 {
-      text-align: center;
-      color: #004080;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      text-align: center;
-      font-size: 18px;
-      color: #212121;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #004080;
-      color: white;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #FFC107;
-      text-decoration: none;
-    }
-
-    footer a:hover {
+    nav a:hover {
       text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    /* Secciones */
+    .section {
+      padding: 80px 0;
+    }
+    .section:nth-child(even) {
+      background: #fff;
+    }
+    .section-title h1 {
+      color: #333;
+      font-weight: bold;
+    }
+    .section-title h4 {
+      color: #6a11cb;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* Botones */
+    .btn-custom {
+      background: linear-gradient(90deg, var(--rojo), var(--dorado));
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-custom:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .btn-card {
+      background-color: var(--celeste);
+      border-color: var(--celeste);
+      color: #fff;
+    }
+    .btn-card:hover {
+      background-color: #5d98d2;
+      border-color: #5d98d2;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>PAÍSES DEL MUNDO</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="colombia.html">Colombia</a></li>
-        <li><a href="españa.html">España</a></li>
-        <li><a href="mexico.html">México</a></li>
-        <li><a href="argentina.html">Argentina</a></li>
-        <li><a href="brasil.html">Brasil</a></li>
-      </ul>
-    </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🌎 Explora Países</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="colombia.html">Colombia</a></li>
+          <li class="nav-item"><a class="nav-link" href="españa.html">España</a></li>
+          <li class="nav-item"><a class="nav-link" href="mexico.html">México</a></li>
+          <li class="nav-item"><a class="nav-link" href="argentina.html">Argentina</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Descubre el Mundo Hispano</h1>
+      <p class="lead">Explora la historia, cultura y naturaleza de nuestros países hermanos.</p>
+      <a href="#paises" class="btn btn-custom mt-3">Comenzar</a>
+    </div>
   </header>
 
-  <section class="hero" id="inicio">
-    <h2>BIENVENIDO</h2>
-    <p>Explora culturas, tradiciones y la belleza de cada país</p>
-  </section>
-
-  <section class="section">
-    <h3>🌍 Explora el Mundo</h3>
-    <p>Descubre países, culturas y tradiciones únicas que enriquecen la diversidad del planeta.</p>
-    <div style="text-align:center; margin-top:20px;">
-      <img src="mapa.png" alt="Mapa del mundo" width="400">
-    </div>
-  </section>
+  <main>
+    <section id="paises" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Nuestros destinos</h4>
+        <h1>Elige un país para comenzar a explorar</h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/españaaaa.jpeg" class="card-img-top" alt="La Alhambra, España">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">España</h5>
+              <p class="card-text">La tierra del sol, el flamenco y una rica historia que ha dejado su huella en el mundo.</p>
+              <a href="españa.html" class="btn btn-card mt-3">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/piramides.jpeg" class="card-img-top" alt="Pirámide de Chichén Itzá, México">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">México</h5>
+              <p class="card-text">Un país con una herencia milenaria, sabores únicos y tradiciones que celebran la vida.</p>
+              <a href="mexico.html" class="btn btn-card mt-3">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/cocora.jpeg" class="card-img-top" alt="Valle del Cocora, Colombia">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Colombia</h5>
+              <p class="card-text">Un paraíso de biodiversidad, el mejor café del mundo y la alegría de su gente.</p>
+              <a href="colombia.html" class="btn btn-card mt-3">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/cataratas.jpg" class="card-img-top" alt="Cataratas del Iguazú, Argentina">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Argentina</h5>
+              <p class="card-text">La tierra del tango, la pasión por el fútbol y paisajes que van desde glaciares hasta cataratas.</p>
+              <a href="argentina.html" class="btn btn-card mt-3">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Países del Mundo | <a href="#inicio">Volver arriba</a></p>
+    <p>&copy; 2025 Explora Países</p>
   </footer>
-</body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
