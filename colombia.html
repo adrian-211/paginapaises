@@ -1,191 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <title>Colombia</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="Página sobre Colombia" name="description">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre Colombia: historia, cultura, geografía y café.">
+  <title>Colombia - Historia, Cultura y Naturaleza</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    :root {
+      --amarillo: #FCD116;
+      --azul: #003893;
+      --rojo: #CE1126;
+      --gris: #f4f6f8;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris);
       color: #333;
+      scroll-behavior: smooth;
     }
 
     /* Navbar */
     nav {
-      background: linear-gradient(90deg, #FFD700, #0033A0, #CE1126);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      background: linear-gradient(90deg, var(--amarillo), var(--azul));
+    }
+    nav a {
+      color: #fff !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    nav h1 {
-      color: white;
-      margin: 0;
-      font-size: 1.8rem;
+    /* Header */
+    header {
+      background: linear-gradient(to right, var(--amarillo), var(--azul));
+      color: #fff;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    /* Secciones */
+    .section {
+      padding: 80px 0;
+    }
+    .section:nth-child(even) {
+      background: #fff;
+    }
+    .section-title h1 {
+      color: var(--rojo);
       font-weight: bold;
     }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
+    .section-title h4 {
+      color: var(--azul);
     }
 
-    nav ul li {
-      display: inline;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
+    /* Botones */
+    .btn-custom {
+      background: linear-gradient(90deg, var(--rojo), #9a0a1a);
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 28px;
       font-weight: bold;
-      transition: color 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-custom:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
-    nav ul li a:hover {
-      color: #FFD700;
+    /* Imágenes */
+    img {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
-    /* Hero */
-    .hero {
-      background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Salento_Colombia.JPG/1200px-Salento_Colombia.JPG") center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-      font-size: 2rem;
-      text-align: center;
-      padding: 20px;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #CE1126;
-      text-align: center;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #0033A0;
-    }
-
+    /* Footer */
     footer {
-      background: #0033A0;
-      color: white;
+      background-color: var(--azul);
+      color: #fff;
       text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+      padding: 30px;
+      margin-top: 40px;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <h1>Colombia</h1>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="colombia.html">Colombia</a></li>
-      <li><a href="españa.html">España</a></li>
-      <li><a href="mexico.html">México</a></li>
-      <li><a href="argentina.html">Argentina</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🇨🇴 Colombia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="colombia.html">Colombia</a></li>
+          <li class="nav-item"><a class="nav-link" href="españa.html">España</a></li>
+          <li class="nav-item"><a class="nav-link" href="mexico.html">México</a></li>
+          <li class="nav-item"><a class="nav-link" href="argentina.html">Argentina</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <!-- Hero -->
-  <div class="hero" id="inicio">
-    <h2>Colombia, tierra de la sabrosura</h2>
-  </div>
+  <header class="text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Descubre Colombia</h1>
+      <p class="lead">Cultura, paisajes y el mejor café</p>
+      <a href="#info" class="btn btn-custom mt-3">Comenzar</a>
+    </div>
+  </header>
 
-  <!-- Cultura -->
-  <section id="cultura">
-    <h2>Cultura Colombiana</h2>
-    <div class="card">
-      <h3>Música y Danza</h3>
-      <p>Colombia es la cuna de ritmos como la cumbia, el vallenato y la salsa caleña. Su diversidad musical refleja la mezcla de culturas indígenas, africanas y europeas.</p>
-    </div>
-    <div class="card">
-      <h3>Arte y Tradiciones</h3>
-      <p>Desde las artesanías de barro y mochilas Wayuu hasta la pintura de Fernando Botero, Colombia destaca por su riqueza artística y cultural.</p>
-    </div>
-  </section>
+  <main>
+    <section id="info" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Información General</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            Colombia es un país de América del Sur, con capital en Bogotá. Limita al este con Venezuela y Brasil, al sur con Ecuador y Perú, y al oeste con el océano Pacífico y el mar Caribe. Su idioma oficial es el español.
+          </p>
+          <p>
+            Su moneda es el peso colombiano ($) y su población es de más de 52 millones de habitantes. Es la única nación sudamericana con costas en ambos océanos y es uno de los países más biodiversos del mundo.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" 
+               class="img-fluid" alt="Bandera de Colombia" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-  <!-- Turismo -->
-  <section id="turismo">
-    <h2>Turismo en Colombia</h2>
-    <div class="card">
-      <h3>Amazonas</h3>
-      <p>Un paraíso natural con selvas exuberantes y diversidad única de fauna y flora.</p>
-    </div>
-    <div class="card">
-      <h3>Cartagena</h3>
-      <p>Ciudad amurallada patrimonio de la humanidad, llena de historia y encanto colonial.</p>
-    </div>
-    <div class="card">
-      <h3>Eje Cafetero</h3>
-      <p>Región montañosa famosa por su café, paisajes y coloridos pueblos.</p>
-    </div>
-  </section>
+    <section id="historia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Historia y Cultura</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ciudad_Perdida_Colombia_2011.jpg" 
+               class="img-fluid" alt="Ciudad Perdida en la Sierra Nevada de Santa Marta" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            El territorio colombiano fue habitado por culturas precolombinas como los muiscas y los taironas. Fue colonizado por España en el siglo XVI y logró su independencia en 1819, liderada por Simón Bolívar.
+          </p>
+          <p>
+            Culturalmente, Colombia es un crisol de influencias indígenas, españolas y africanas. Es la cuna de géneros musicales como el vallenato, la cumbia y la salsa. Ciudades como Cartagena, con su arquitectura colonial, y la vibrante Medellín, son centros culturales importantes.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Gastronomía -->
-  <section id="gastronomia">
-    <h2>Gastronomía Colombiana</h2>
-    <div class="card">
-      <h3>Bandeja Paisa</h3>
-      <p>Plato típico de Antioquia, con frijoles, arroz, carne, chicharrón, huevo, arepa y aguacate.</p>
-    </div>
-    <div class="card">
-      <h3>Ajiaco Santafereño</h3>
-      <p>Sopa tradicional de Bogotá hecha con papa criolla, pollo y guascas.</p>
-    </div>
-    <div class="card">
-      <h3>Arepas</h3>
-      <p>Base de la gastronomía colombiana, con múltiples variedades en cada región.</p>
-    </div>
-  </section>
+    <section id="geografia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Geografía y Naturaleza</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            Colombia posee una geografía extremadamente variada, con la cordillera de los Andes dividiéndose en tres ramales, la Amazonía, la llanura de la Orinoquía y las costas en el Caribe y el Pacífico.
+          </p>
+          <p>
+            Gracias a su ubicación y clima, es el país con mayor diversidad de aves del mundo y el segundo en biodiversidad en general. Famoso por sus parques nacionales, su Eje Cafetero, los paisajes de la Guajira y los picos nevados.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Valle_de_cocora_palmas_de_cera.jpg" 
+               class="img-fluid" alt="Valle del Cocora con palmas de cera" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-  <!-- Contacto -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <div class="card">
-      <p>Si quieres conocer más de Colombia, visita el sitio oficial de turismo:
-        <a href="https://colombia.travel/es" target="_blank">Colombia Travel</a>.
-      </p>
-    </div>
-  </section>
+    <section id="economia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Economía y Curiosidades</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Cafeteros_en_Colombia.jpg" 
+               class="img-fluid" alt="Cafeteros en Colombia" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            La economía de Colombia es la tercera más grande de América Latina. Sus principales exportaciones son el petróleo, el carbón, el oro, las flores y, por supuesto, el café, considerado uno de los mejores del mundo. El turismo ha crecido enormemente en los últimos años.
+          </p>
+          <p>
+            Curiosidades: En Colombia se produce una de las esmeraldas más finas del mundo. El país celebra el Carnaval de Barranquilla, considerado Patrimonio Cultural de la Humanidad. El río Caño Cristales es conocido como el "río de los cinco colores".
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Colombia - Tierra de la Sabrosura</p>
+    <p>&copy; 2025 Página sobre Colombia</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

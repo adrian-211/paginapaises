@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre España: historia, cultura, geografía, naturaleza y economía.">
+  <title>España - Historia, Cultura y Naturaleza</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #c21807;
+    }
+    nav a {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    header {
+      background: linear-gradient(to right, #c21807, #ffcc00);
+      color: #fff;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .section:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    .section-title h1 {
+      color: #c21807;
+      font-weight: bold;
+    }
+    .section-title h4 {
+      color: #003399;
+    }
+    .btn-custom {
+      background-color: #ffc107;
+      color: #000;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #e0a800;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #003399;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">España</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#info">Información</a></li>
+          <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#geografia">Geografía</a></li>
+          <li class="nav-item"><a class="nav-link" href="#economia">Economía</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="text-center py-5 mt-5">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Descubre España</h1>
+      <p class="lead">Historia, cultura y naturaleza en un solo lugar</p>
+      <a href="#info" class="btn btn-custom mt-3">Comenzar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Información General -->
+    <section id="info" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Información General</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            España, oficialmente conocido como el Reino de España, es un país situado en el suroeste de Europa. 
+            Su capital es Madrid y su idioma oficial es el español o castellano, aunque en algunas regiones 
+            también se hablan lenguas cooficiales como el catalán, el gallego y el euskera.
+          </p>
+          <p>
+            La moneda oficial es el euro (€) y cuenta con una población cercana a los 47 millones de habitantes. 
+            España es una monarquía parlamentaria y forma parte de la Unión Europea. Además, incluye las Islas Baleares, 
+            las Islas Canarias y las ciudades autónomas de Ceuta y Melilla.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" 
+               class="img-fluid rounded shadow" alt="Bandera de España" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia y Cultura -->
+    <section id="historia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Historia y Cultura</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Alhambra.jpg" 
+               class="img-fluid rounded shadow" alt="La Alhambra en Granada" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            España ha sido hogar de grandes civilizaciones como romanos, visigodos y árabes. 
+            En 1492, con los Reyes Católicos, inició su expansión hacia América, convirtiéndose en una potencia mundial. 
+            Hoy en día, es una democracia consolidada desde 1978.
+          </p>
+          <p>
+            Culturalmente, destaca por el flamenco, las fiestas populares como los Sanfermines y la Tomatina, 
+            así como por monumentos únicos como la Alhambra y la Sagrada Familia. 
+            Su gastronomía es mundialmente conocida gracias a la paella, las tapas y el jamón ibérico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geografía y Naturaleza -->
+    <section id="geografia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Geografía y Naturaleza</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            El territorio español se caracteriza por su diversidad geográfica. 
+            Alberga montañas como los Pirineos y Sierra Nevada, mesetas extensas y más de 8.000 km de costas.
+          </p>
+          <p>
+            Los ríos más importantes son el Ebro, el Tajo y el Guadalquivir. 
+            Además, España ofrece climas variados: mediterráneo, oceánico y continental. 
+            Sus paisajes naturales incluyen el Camino de Santiago, playas en la Costa del Sol y parques nacionales en Canarias.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Picos_de_Europa_-_Lagos_de_Covadonga.jpg" 
+               class="img-fluid rounded shadow" alt="Picos de Europa - Lagos de Covadonga" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Economía y Curiosidades -->
+    <section id="economia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Economía y Curiosidades</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Toledo_skyline.jpg" 
+               class="img-fluid rounded shadow" alt="Vista de Toledo" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            España cuenta con una economía fuerte, sustentada en sectores como el turismo, la agricultura, 
+            la industria automotriz y las energías renovables. El turismo es uno de sus motores principales, 
+            situándose entre los países más visitados del mundo.
+          </p>
+          <p>
+            Algunas curiosidades: España es el segundo país con más Patrimonios de la Humanidad, 
+            el español es la segunda lengua más hablada en el mundo por hablantes nativos, 
+            y en regiones como Andalucía o Canarias hay más de 300 días de sol al año.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Página sobre España | Diseñado con ❤️ y Bootstrap</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+¿Quieres que le agregue también un carrusel de imágenes turísticas (tipo slideshow con Bootstrap) para hacerlo más atractivo visualmente?
+
+
+
+
+
+
+
+Dijiste:
+mejorale los colores y hazlo más moderno
+
+
+ChatGPT dijo:
+¡Perfecto 🚀! Para que tu página sobre España se vea más moderna y atractiva, lo que vamos a hacer es:
+
+🎨 Cambios en colores y estilo
+Usar un gradiente cálido con tonos rojo (#d32f2f) y dorado (#ffb300) inspirados en la bandera de España.
+
+Darle un look más minimalista y elegante con bastante espacio en blanco y tipografía moderna.
+
+Botones más llamativos con un efecto de sombra suave y animación.
+
+Secciones con fondos degradados alternados y un footer oscuro elegante.
+
+📌 Código mejorado y moderno
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre España: historia, cultura, geografía, naturaleza y economía.">
+  <title>España - Historia, Cultura y Naturaleza</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --rojo: #d32f2f;
+      --dorado: #ffb300;
+      --azul: #002b7f;
+      --gris: #f4f6f8;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, var(--rojo), var(--dorado));
+    }
+    nav a {
+      color: #fff !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, var(--rojo), var(--dorado));
+      color: #fff;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    /* Secciones */
+    .section {
+      padding: 80px 0;
+    }
+    .section:nth-child(even) {
+      background: #fff;
+    }
+    .section-title h1 {
+      color: var(--rojo);
+      font-weight: bold;
+    }
+    .section-title h4 {
+      color: var(--azul);
+    }
+
+    /* Botones */
+    .btn-custom {
+      background: linear-gradient(90deg, var(--dorado), #ff9800);
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-custom:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Imágenes */
+    img {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--azul);
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🇪🇸 España</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="colombia.html">Colombia</a></li>
+          <li class="nav-item"><a class="nav-link active" href="españa.html">España</a></li>
+          <li class="nav-item"><a class="nav-link" href="mexico.html">México</a></li>
+          <li class="nav-item"><a class="nav-link" href="argentina.html">Argentina</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Descubre España</h1>
+      <p class="lead">Historia, cultura y naturaleza en un solo lugar</p>
+      <a href="#info" class="btn btn-custom mt-3">Comenzar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Información General -->
+    <section id="info" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Información General</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            España, oficialmente conocido como el Reino de España, es un país situado en el suroeste de Europa. 
+            Su capital es Madrid y su idioma oficial es el español o castellano, aunque en algunas regiones 
+            también se hablan lenguas cooficiales como el catalán, el gallego y el euskera.
+          </p>
+          <p>
+            La moneda oficial es el euro (€) y cuenta con una población cercana a los 47 millones de habitantes. 
+            España es una monarquía parlamentaria y forma parte de la Unión Europea. Además, incluye las Islas Baleares, 
+            las Islas Canarias y las ciudades autónomas de Ceuta y Melilla.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" 
+               class="img-fluid" alt="Bandera de España" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia y Cultura -->
+    <section id="historia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Historia y Cultura</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Alhambra.jpg" 
+               class="img-fluid" alt="La Alhambra en Granada" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            España ha sido hogar de grandes civilizaciones como romanos, visigodos y árabes. 
+            En 1492, con los Reyes Católicos, inició su expansión hacia América, convirtiéndose en una potencia mundial. 
+            Hoy en día, es una democracia consolidada desde 1978.
+          </p>
+          <p>
+            Culturalmente, destaca por el flamenco, las fiestas populares como los Sanfermines y la Tomatina, 
+            así como por monumentos únicos como la Alhambra y la Sagrada Familia. 
+            Su gastronomía es mundialmente conocida gracias a la paella, las tapas y el jamón ibérico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geografía y Naturaleza -->
+    <section id="geografia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Geografía y Naturaleza</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            El territorio español se caracteriza por su diversidad geográfica. 
+            Alberga montañas como los Pirineos y Sierra Nevada, mesetas extensas y más de 8.000 km de costas.
+          </p>
+          <p>
+            Los ríos más importantes son el Ebro, el Tajo y el Guadalquivir. 
+            Además, España ofrece climas variados: mediterráneo, oceánico y continental. 
+            Sus paisajes naturales incluyen el Camino de Santiago, playas en la Costa del Sol y parques nacionales en Canarias.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Picos_de_Europa_-_Lagos_de_Covadonga.jpg" 
+               class="img-fluid" alt="Picos de Europa - Lagos de Covadonga" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Economía y Curiosidades -->
+    <section id="economia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>España</h4>
+        <h1>Economía y Curiosidades</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Toledo_skyline.jpg" 
+               class="img-fluid" alt="Vista de Toledo" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            España cuenta con una economía fuerte, sustentada en sectores como el turismo, la agricultura, 
+            la industria automotriz y las energías renovables. El turismo es uno de sus motores principales, 
+            situándose entre los países más visitados del mundo.
+          </p>
+          <p>
+            Algunas curiosidades: España es el segundo país con más Patrimonios de la Humanidad, 
+            el español es la segunda lengua más hablada en el mundo por hablantes nativos, 
+            y en regiones como Andalucía o Canarias hay más de 300 días de sol al año.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Página sobre España</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
