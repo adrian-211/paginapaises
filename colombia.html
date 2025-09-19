@@ -1,225 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>KOPPEE - Coffee Shop HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre Colombia: historia, cultura, geografía y café.">
+  <title>Colombia - Historia, Cultura y Naturaleza</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --amarillo: #FCD116;
+      --azul: #003893;
+      --rojo: #CE1126;
+      --gris: #f4f6f8;
+    }
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris);
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, var(--amarillo), var(--azul));
+    }
+    nav a {
+      color: #fff !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    /* Header */
+    header {
+      background: linear-gradient(to right, var(--amarillo), var(--azul));
+      color: #fff;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    /* Secciones */
+    .section {
+      padding: 80px 0;
+    }
+    .section:nth-child(even) {
+      background: #fff;
+    }
+    .section-title h1 {
+      color: var(--rojo);
+      font-weight: bold;
+    }
+    .section-title h4 {
+      color: var(--azul);
+    }
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.min.css" rel="stylesheet">
+    /* Botones */
+    .btn-custom {
+      background: linear-gradient(90deg, var(--rojo), #9a0a1a);
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-custom:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Imágenes */
+    img {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--azul);
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
-        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 class="m-0 display-4 text-uppercase text-white">KOPPEE</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link active">Service</a>
-                    <a href="menu.html" class="nav-item nav-link">Menu</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu text-capitalize">
-                            <a href="reservation.html" class="dropdown-item">Reservation</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-            </div>
-        </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🇨🇴 Colombia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="colombia.html">Colombia</a></li>
+          <li class="nav-item"><a class="nav-link" href="españa.html">España</a></li>
+          <li class="nav-item"><a class="nav-link" href="mexico.html">México</a></li>
+          <li class="nav-item"><a class="nav-link" href="argentina.html">Argentina</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- Navbar End -->
+  </nav>
 
+  <header class="text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Descubre Colombia</h1>
+      <p class="lead">Cultura, paisajes y el mejor café</p>
+      <a href="#info" class="btn btn-custom mt-3">Comenzar</a>
+    </div>
+  </header>
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
-        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
-            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Services</h1>
-            <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="">Colombia</a></p>
-                <p class="m-0 text-white px-2">/</p>
-                <p class="m-0 text-white">colombia</p>
-            </div>
+  <main>
+    <section id="info" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Información General</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            Colombia es un país de América del Sur, con capital en Bogotá. Limita al este con Venezuela y Brasil, al sur con Ecuador y Perú, y al oeste con el océano Pacífico y el mar Caribe. Su idioma oficial es el español.
+          </p>
+          <p>
+            Su moneda es el peso colombiano ($) y su población es de más de 52 millones de habitantes. Es la única nación sudamericana con costas en ambos océanos y es uno de los países más biodiversos del mundo.
+          </p>
         </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Service Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Colombia</h4>
-                <h1 class="display-4">💛💙❤️ Colombia, tierra de la sabrosura</h1><br>
-
-                 <br><p class="m-0">Nombre oficial: República de Colombia</p>
-                 <br><p class="m-0">Capital: Bogotá D.C.</p>
-                 <br><p class="m-0">Ubicación: Noroeste de América del Sur, limita con Venezuela, Brasil, Perú, Ecuador y Panamá; tiene costas en el Océano Pacífico y el Mar Caribe.</p>
-                 <br><p class="m-0">Nombre oficial: República de Colombia</p>
-                 <br><p class="m-0">Población: ~52 millones de habitantes (2025, aprox.).</p>
-                 <br><p class="m-0">Idioma oficial: Español (aunque existen 65 lenguas indígenas reconocidas).</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-truck service-icon"></i>Gastronomía:</h4>
-                            <p class="m-0">Plato típico: Bandeja paisa.
-
-                            </p>
-                                Otros: arepas, sancocho, ajiaco santafereño, lechona tolimense, empanadas, tamales, arroz con coco.
-
-                                Bebidas: café colombiano (de los mejores del mundo), aguardiente, chicha
-
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-2.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-coffee service-icon"></i>Diversidad cultural</h4>
-                            <p class="m-0">Es un país pluriétnico y multicultural, con influencias indígenas, europeas y africanas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-3.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-award service-icon"></i>Fiestas importantes</h4>
-                            <p class="m-0">Carnaval de Barranquilla</p> <br>
-                            <p class="m-0">Feria de las Flores en Medellín.</p> <br>
-                            <p class="m-0">Carnaval de Negros y Blancos en Pasto.</p> <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-4.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-table service-icon"></i>Artes y literatura</h4>
-                            <p class="m-0">Escritor más destacado: Gabriel García Márquez, Premio Nobel de Literatura (1982).</p><br>
-                            <p class="m-0">Artes plásticas: Fernando Botero, reconocido por sus figuras voluminosas.</p><br>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" 
+               class="img-fluid" alt="Bandera de Colombia" loading="lazy">
         </div>
-    </div>
-    <!-- Service End -->
+      </div>
+    </section>
 
-    <div class="col-sm-5">
-        <img class="img-fluid mb-3 mb-sm-0" src="img/service-1.jpg" alt="">
-    </div>
-
-    <!-- Footer Start -->
-    <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
-        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Open Hours</h4>
-                <div>
-                    <h6 class="text-white text-uppercase">Monday - Friday</h6>
-                    <p>8.00 AM - 8.00 PM</p>
-                    <h6 class="text-white text-uppercase">Saturday - Sunday</h6>
-                    <p>2.00 PM - 8.00 PM</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="historia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Historia y Cultura</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ciudad_Perdida_Colombia_2011.jpg" 
+               class="img-fluid" alt="Ciudad Perdida en la Sierra Nevada de Santa Marta" loading="lazy">
         </div>
-        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+        <div class="col-lg-6">
+          <p>
+            El territorio colombiano fue habitado por culturas precolombinas como los muiscas y los taironas. Fue colonizado por España en el siglo XVI y logró su independencia en 1819, liderada por Simón Bolívar.
+          </p>
+          <p>
+            Culturalmente, Colombia es un crisol de influencias indígenas, españolas y africanas. Es la cuna de géneros musicales como el vallenato, la cumbia y la salsa. Ciudades como Cartagena, con su arquitectura colonial, y la vibrante Medellín, son centros culturales importantes.
+          </p>
         </div>
-    </div>
-    <!-- Footer End -->
+      </div>
+    </section>
 
+    <section id="geografia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Geografía y Naturaleza</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p>
+            Colombia posee una geografía extremadamente variada, con la cordillera de los Andes dividiéndose en tres ramales, la Amazonía, la llanura de la Orinoquía y las costas en el Caribe y el Pacífico.
+          </p>
+          <p>
+            Gracias a su ubicación y clima, es el país con mayor diversidad de aves del mundo y el segundo en biodiversidad en general. Famoso por sus parques nacionales, su Eje Cafetero, los paisajes de la Guajira y los picos nevados.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Valle_de_cocora_palmas_de_cera.jpg" 
+               class="img-fluid" alt="Valle del Cocora con palmas de cera" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <section id="economia" class="section container">
+      <div class="section-title text-center mb-5">
+        <h4>Colombia</h4>
+        <h1>Economía y Curiosidades</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Cafeteros_en_Colombia.jpg" 
+               class="img-fluid" alt="Cafeteros en Colombia" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <p>
+            La economía de Colombia es la tercera más grande de América Latina. Sus principales exportaciones son el petróleo, el carbón, el oro, las flores y, por supuesto, el café, considerado uno de los mejores del mundo. El turismo ha crecido enormemente en los últimos años.
+          </p>
+          <p>
+            Curiosidades: En Colombia se produce una de las esmeraldas más finas del mundo. El país celebra el Carnaval de Barranquilla, considerado Patrimonio Cultural de la Humanidad. El río Caño Cristales es conocido como el "río de los cinco colores".
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Página sobre Colombia</p>
+  </footer>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
